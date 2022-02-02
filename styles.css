@@ -36,12 +36,13 @@ font-weight value for the title will be normal instead of bold
 .nav a{
     color: white;
     background-color: #13a4a4;
-    padding: 5px;
+    padding: 5px 15px; /*Top and bottom padding, then left and right padding*/
     border-radius: 2px;
     text-decoration: none;
 }
-a.featured{
+.nav .featured{
     background-color: orange;
+    box-shadow: 10px 2px #6f9090 /*Shadow offset 10px to the right and 2px down*/
 }
 .footer{
     color: #666;
