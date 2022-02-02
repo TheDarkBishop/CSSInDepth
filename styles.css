@@ -32,7 +32,7 @@ a.featured{
     font-size: 14px;
 }
 .footer a{
-    color: inherit; /*inherited value comes from footer instead of global a:link selector*/
+    color: initial; /*resets color property to it's initial, or default, value; which in this case is black*/
     text-decoration: underline;
 }
 
