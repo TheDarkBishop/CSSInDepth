@@ -1,24 +1,28 @@
-:root{ /*applies to all screens*/
+:root{
     font-size: 0.75em;
 }
-@media (min-width: 800px) {/*applies to screens 800px and wider, and overrides the original base font-size*/
+@media (min-width: 800px) {
     :root{
         font-size: 0.875em;
     }
 }
-@media (min-width: 1200px){ /*applies to screens 1200px and wider, overriding the previous two styles*/
+@media (min-width: 1200px){
     :root{
         font-size: 1em;
     }
 }
 .panel{
-    padding: 1em; /*relative to local <div> font-size 14px inherited from the root element*/
-    border-radius: 0.5em;/*relative to local <div> font-size 14px inherited from the root element*/
+    font-size: 1rem; /*establishes predictable font-size for div component*/
+    padding: 1em;
+    border-radius: 0.5em;
     border: 1px solid black;
 }
 .panel > h2{
     margin-top: 0;
-    font-size: 0.8rem;/*relative to the ROOT <html> font-size of 14px*/
+    font-size: 0.8em;/*now relative to the established parent font-size*/
     font-weight: bold;
     text-transform: uppercase;
+}
+.panel.large{
+    font-size: 1.2rem; /*changes font-size of div component rescaling the whole component*/
 }
