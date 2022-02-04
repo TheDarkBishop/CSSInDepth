@@ -1,5 +1,15 @@
-:root{
-    font-size: 0.875em;
+:root{ /*applies to all screens*/
+    font-size: 0.75em;
+}
+@media (min-width: 800px) {/*applies to screens 800px and wider, and overrides the original base font-size*/
+    :root{
+        font-size: 0.875em;
+    }
+}
+@media (min-width: 1200px){ /*applies to screens 1200px and wider, overriding the previous two styles*/
+    :root{
+        font-size: 1em;
+    }
 }
 .panel{
     padding: 1em; /*relative to local <div> font-size 14px inherited from the root element*/
