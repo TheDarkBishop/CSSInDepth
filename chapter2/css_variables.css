@@ -1,8 +1,15 @@
-body{
-    line-height: 1.2; /*descendant elements will inherit this unitless line-height value of 1.2*/
+:root{
+    --main-font: Helvetica, Arial;
+    --brand-color: #369;
+    /*custom properties, or css variables, must be defined in a declaration block
+      and must begin with double hyphen
+     */
 }
-.about-us{
-    font-size: 2em; /*the unitless 1.2 line-height value is then calculated locally here to 38.4px
-                    (32px from the font-size multiplied by 1.2) producing an appropriate amount of
-                    space between lines of text*/
+p{
+    font-family: var(--main-font, sans-serif);
+    color: var(--brand-color, black);
+    background-color: var(--some-color, yellow);
+    /*to use custom properties, you must use the var() function which takes two arguments:
+      the custom property and a fallback value
+     */
 }
