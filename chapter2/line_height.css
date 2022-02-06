@@ -1,18 +1,8 @@
-:root{
-    font-size: calc(0.5em + 1vw); /*the 1vw adds a responsive scalar to the base font*/
+body{
+    line-height: 1.2; /*descendant elements will inherit this unitless line-height value of 1.2*/
 }
-.panel{
-    font-size: 1rem; /*establishes predictable font-size for div component*/
-    padding: 1em;
-    border-radius: 0.5em;
-    border: 1px solid black;
-}
-.panel > h2{
-    margin-top: 0;
-    font-size: 0.8em;/*now relative to the established parent font-size*/
-    font-weight: bold;
-    text-transform: uppercase;
-}
-.panel.large{
-    font-size: 1.2rem; /*changes font-size of div component rescaling the whole component*/
+.about-us{
+    font-size: 2em; /*the unitless 1.2 line-height value is then calculated locally here to 38.4px
+                    (32px from the font-size multiplied by 1.2) producing an appropriate amount of
+                    space between lines of text*/
 }
