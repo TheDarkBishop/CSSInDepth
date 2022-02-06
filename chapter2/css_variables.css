@@ -1,15 +1,30 @@
 :root{
-    --main-font: Helvetica, Arial;
-    --brand-color: #369;
-    /*custom properties, or css variables, must be defined in a declaration block
-      and must begin with double hyphen
+    --main-bg: #fff;
+    --main-color: #000;
+}
+.dark{
+    --main-bg: #333;
+    --main-color: #fff;
+    margin-top: 2em;
+    padding: 1em;
+}
+.panel{
+    font-size: 1rem;
+    padding: 1em;
+    border: 1px solid #999;
+    border-radius: 0.5em;
+    background-color: var(--main-bg);
+    color: var(--main-color)
+    /*one panel component will have a white background with black text because it's within scope of
+    the root container's css variables, and another panel will have a dark background with white text
+    because even though it's also within scope of the root element's custom properties, it is additionally
+    within scope of the .dark class container's custom properties, and will thus inherit the .dark class
+    container's cascaded custom property values, hence, overriding the root container's custom properties.
      */
 }
-p{
-    font-family: var(--main-font, sans-serif);
-    color: var(--brand-color, black);
-    background-color: var(--some-color, yellow);
-    /*to use custom properties, you must use the var() function which takes two arguments:
-      the custom property and a fallback value
-     */
+.panel > h2{
+    margin-top: 0;
+    font-size: 0.8em;
+    font-weight: bold;
+    text-transform: uppercase;
 }
