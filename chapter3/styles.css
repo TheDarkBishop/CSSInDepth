@@ -23,7 +23,7 @@ main{
 }
 .sidebar{
     float: left;
-    width: 30%;
+    width: calc(30% - 3em); /*get the exact desired width instead of guessing and using a 'magic number'*/
     padding: 1.5em;
     background-color: var(--bg-color2);
     border-radius: 0.5em;
