@@ -1,7 +1,12 @@
 :root{
+    box-sizing: border-box; /*applies border box sizing to the root element*/
     font-size: 1em;
     --bg-color1: #eee;
     --bg-color2: #fff;
+}
+*, ::before, ::after{
+    box-sizing: inherit; /*then all other elements and pseudo-elements inherit their box sizing from the
+                           root element*/
 }
 body{
     background-color: var(--bg-color1);
