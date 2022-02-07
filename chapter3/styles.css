@@ -16,14 +16,16 @@ main{
     display: block;
 }
 .main{
+    box-sizing: border-box;/*includes both padding and border for width (and height) property value*/
     float: left;
     width: 70%;
     background-color: var(--bg-color2);
     border-radius: 0.5em;
 }
 .sidebar{
+    box-sizing: border-box; /*includes both padding and border for width (and height) property value*/
     float: left;
-    width: calc(30% - 3em); /*get the exact desired width instead of guessing and using a 'magic number'*/
+    width: 30%;
     padding: 1.5em;
     background-color: var(--bg-color2);
     border-radius: 0.5em;
