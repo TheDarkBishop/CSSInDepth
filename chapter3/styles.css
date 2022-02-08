@@ -19,9 +19,16 @@ header{
 main{
     display: block;
 }
+.wrapper{
+    margin-left: -1.5em;
+    margin-right: -1.5em;
+    /*adds new wrapper element with negative margins to counter the border spacing's
+      outside margins*/
+}
 .container{
-    display: table; /*makes container layout resemble a table*/
-    width: 100%; /*Makes the table fill it's parent container width*/
+    display: table;
+    width: 100%;
+    border-spacing: 1.5em 0; /*applies horizontal border spacing between table cells to create gutter effect*/
 }
 .main{
     display: table-cell; /*makes column layout mimic table cells*/
