@@ -19,27 +19,18 @@ header{
 main{
     display: block;
 }
-.wrapper{
-    margin-left: -1.5em;
-    margin-right: -1.5em;
-    /*adds new wrapper element with negative margins to counter the border spacing's
-      outside margins*/
+
+.container {
+    display: flex; /*container becomes a 'flex container'*/
 }
-.container{
-    display: table;
-    width: 100%;
-    border-spacing: 1.5em 0; /*applies horizontal border spacing between table cells to create gutter effect*/
-}
-.main{
-    display: table-cell; /*makes column layout mimic table cells*/
+.main{ /*this element becomes a flex item*/
     width: 70%;
     background-color: var(--bg-color2);
     border-radius: 0.5em;
 }
-.sidebar{
-    display: table-cell; /*makes column layout mimic table cells*/
-    width: calc(30% - 1.5em);
-    margin-left: 1.5em; /*margin no longer works*/
+.sidebar{ /*this element becomes a flex item*/
+    width: 30%;
+    margin-left: 1.5em; /*margin works even though it adds up to more than 100% of the containers width*/
     padding: 1.5em;
     background-color: var(--bg-color2);
     border-radius: 0.5em;
