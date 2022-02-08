@@ -19,18 +19,20 @@ header{
 main{
     display: block;
 }
+.container{
+    display: table; /*makes container layout resemble a table*/
+    width: 100%; /*Makes the table fill it's parent container width*/
+}
 .main{
-    box-sizing: border-box;
-    float: left;
+    display: table-cell; /*makes column layout mimic table cells*/
     width: 70%;
     background-color: var(--bg-color2);
     border-radius: 0.5em;
 }
 .sidebar{
-    box-sizing: border-box;
-    float: left;
-    width: calc(30% - 1.5em); /*subtract 1.5em from the width...*/
-    margin-left: 1.5em; /*add 1.5em to the margin, maintaining the same overall width length*/
+    display: table-cell; /*makes column layout mimic table cells*/
+    width: calc(30% - 1.5em);
+    margin-left: 1.5em; /*margin no longer works*/
     padding: 1.5em;
     background-color: var(--bg-color2);
     border-radius: 0.5em;
