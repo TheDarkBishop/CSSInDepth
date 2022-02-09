@@ -1,8 +1,8 @@
 :root{
     box-sizing: border-box;
-    font-size: 1em;
     --bg-color1: #eee;
     --bg-color2: #fff;
+    --bg-color3: #0072b0;
 }
 *, ::before, ::after{
     box-sizing: inherit;
@@ -11,9 +11,14 @@ body{
     background-color: var(--bg-color1);
     font-family: Helvetica, Arial, sans-serif;
 }
+body * + *{
+    margin-top: 1.5em;
+}
 header{
+    padding: 1em 1.5em; /*to prevent <h1> default user agent style margin from collapsing outside it's
+                          header container*/
     color: var(--bg-color2);
-    background-color: #0072b0;
+    background-color: var(--bg-color3);
     border-radius: 0.5em;
 }
 main{
@@ -25,13 +30,33 @@ main{
 }
 .main{ /*this element becomes a flex item*/
     width: 70%;
+    padding: 1em 1.5em;
     background-color: var(--bg-color2);
     border-radius: 0.5em;
 }
 .sidebar{ /*this element becomes a flex item*/
     width: 30%;
+    margin-top: 0; /*removes top margin applied by the lobotomized owl selector*/
     margin-left: 1.5em; /*margin works even though it adds up to more than 100% of the containers width*/
     padding: 1.5em;
     background-color: var(--bg-color2);
     border-radius: 0.5em;
+}
+.button-link{
+    display: block;
+    padding: 0.5em;
+    color: var(--bg-color2);
+    background-color: #0090c9;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+.button-link + .button-link{
+    margin-top: 1.5em;
+}
+.sponsor-link{
+    display: block;
+    color: var(--bg-color3);
+    font-weight: bold;
+    text-decoration: none;
 }
