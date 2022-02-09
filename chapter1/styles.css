@@ -1,0 +1,58 @@
+a:link{
+    color:blue; /*inherited value for all link text*/
+}
+h1{
+    color: #2f4f4f;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+.title{
+    font: 32px Helvetica, Arial, sans-serif;
+}
+/* the above ruleset silently overrides the bold value set for the font-weight
+in the h1 tag. This is because shorthand properties such as font still apply the initial value
+to the remaining properties not specified and is equivalent to the ruleset below
+.title{
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    font-stretch: normal;
+    font-height: normal;
+    font-size: 32px;
+    font-family: Helvetica, Arial, sans-serif;
+}
+where the value normal represents the initial, or default values for those properties. Hence, the cascaded
+font-weight value for the title will be normal instead of bold
+ */
+.nav{
+    margin-top: 10px;
+    list-style: none;
+    padding-left: 0;
+}
+.nav li{
+    display: inline-block;
+}
+.nav a{
+    color: white;
+    background-color: #13a4a4;
+    padding: 5px 15px; /*Top and bottom padding, then left and right padding*/
+    border-radius: 2px;
+    text-decoration: none;
+}
+.nav .featured{
+    background-color: orange;
+    box-shadow: 10px 2px #6f9090 /*Shadow offset 10px to the right and 2px down*/
+}
+.footer{
+    color: #666;
+    background-color: #ccc;
+    padding: 15px 0;
+    text-align: center;
+    font-size: 14px;
+}
+.footer a{
+    color: initial; /*resets color property to it's initial, or default, value; which in this case is black*/
+    text-decoration: underline;
+}
+
+
